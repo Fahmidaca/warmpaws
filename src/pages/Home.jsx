@@ -38,7 +38,7 @@ const Home = () => {
       id: 1,
       title: 'Keep Your Pets Warm This Winter',
       subtitle: 'Professional winter care services to ensure your furry friends stay comfortable and healthy',
-      image: 'https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      image: 'https://images.unsplash.com/photo-1544568100-847a948585b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
       cta: 'Explore Services'
     },
     {
@@ -52,8 +52,22 @@ const Home = () => {
       id: 3,
       title: 'Cozy Indoor Activities',
       subtitle: 'Keep your pets active and entertained when it\'s too cold to go outside',
-      image: 'https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      image: 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
       cta: 'View Activities'
+    },
+    {
+      id: 4,
+      title: 'Professional Grooming Services',
+      subtitle: 'Winter-specific grooming with paw protection and moisturizing treatments',
+      image: 'https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      cta: 'Book Grooming'
+    },
+    {
+      id: 5,
+      title: 'Emergency Pet Care',
+      subtitle: '24/7 emergency services for winter-related pet health concerns',
+      image: 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      cta: 'Emergency Care'
     }
   ];
 
@@ -261,39 +275,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Winter Care Tips */}
-      <section id="tips" className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12" data-aos="fade-up">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Winter Care Tips for Pets
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Essential tips to keep your pets safe, warm, and healthy during the cold season
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {winterTips.map((tip, index) => (
-              <div 
-                key={tip.id}
-                className="text-center p-6 rounded-lg hover:bg-warm-50 transition-colors duration-300"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <div className="text-6xl mb-4">{tip.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {tip.title}
-                </h3>
-                <p className="text-gray-600">
-                  {tip.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Meet Our Expert Vets */}
       <section id="experts" className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -341,7 +322,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Extra Section: Emergency Contact */}
+      {/* Emergency Contact & Prevention Section */}
       <section className="py-16 bg-warm-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center" data-aos="fade-up">
@@ -370,7 +351,7 @@ const Home = () => {
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
               <a 
                 href="tel:+15551234567" 
                 className="bg-white text-warm-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center"
@@ -380,12 +361,107 @@ const Home = () => {
                 </svg>
                 Call Emergency: (555) 123-4567
               </a>
-              <a 
-                href="#" 
+              <Link 
+                to="/safety-guide" 
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-warm-600 transition-colors duration-200"
               >
-                Learn More
-              </a>
+                Complete Safety Guide
+              </Link>
+            </div>
+            
+            <div className="bg-warm-500 bg-opacity-50 rounded-lg p-6 max-w-4xl mx-auto">
+              <h3 className="text-xl font-semibold mb-3">🛡️ Prevention is Better Than Cure</h3>
+              <p className="text-lg">
+                While we're here for emergencies, following our comprehensive winter safety checklist below can help prevent many winter-related pet health issues before they become serious.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Winter Prevention & Safety Tips */}
+      <section id="safety-guide" className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12" data-aos="fade-up">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Winter Prevention & Safety Tips
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Following these essential preventive measures can help keep your pets safe, warm, and healthy during the cold season, reducing the need for emergency care.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            {winterTips.map((tip, index) => (
+              <div 
+                key={tip.id}
+                className="text-center p-6 rounded-lg hover:bg-warm-50 transition-colors duration-300"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
+                <div className="text-6xl mb-4">{tip.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {tip.title}
+                </h3>
+                <p className="text-gray-600">
+                  {tip.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Additional Safety Tips */}
+          <div className="bg-warm-50 rounded-lg p-8" data-aos="fade-up">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              Additional Winter Safety Reminders
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="text-2xl mr-3">❄️</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Keep Pets Indoors</h4>
+                    <p className="text-gray-600 text-sm">Limit outdoor time during extreme cold. Bring pets inside when temperatures drop below freezing.</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="text-2xl mr-3">🧤</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Check for Frostbite</h4>
+                    <p className="text-gray-600 text-sm">Monitor ears, tail, and paws for signs of frostbite. Seek immediate vet care if suspected.</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="text-2xl mr-3">🚗</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Car Safety</h4>
+                    <p className="text-gray-600 text-sm">Never leave pets in cold cars. Warm up vehicles before letting pets inside.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="text-2xl mr-3">🧂</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Avoid Salt & Chemicals</h4>
+                    <p className="text-gray-600 text-sm">Use pet-safe ice melts. Wash paws after walks to remove harmful substances.</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="text-2xl mr-3">🏠</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Emergency Supplies</h4>
+                    <p className="text-gray-600 text-sm">Keep emergency contact numbers and basic first aid supplies readily available.</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="text-2xl mr-3">⏰</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Monitor Closely</h4>
+                    <p className="text-gray-600 text-sm">Watch for signs of cold stress: shivering, lethargy, pale gums, or difficulty breathing.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

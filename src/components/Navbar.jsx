@@ -53,6 +53,17 @@ const Navbar = () => {
               Home
             </Link>
             
+            <Link
+              to="/services"
+              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                isActive('/services') 
+                  ? 'text-warm-600 bg-warm-50' 
+                  : 'text-gray-700 hover:text-warm-600 hover:bg-warm-50'
+              }`}
+            >
+              Services
+            </Link>
+            
             {user ? (
               <>
                 <Link
@@ -156,6 +167,18 @@ const Navbar = () => {
                 }`}
               >
                 Home
+              </Link>
+              
+              <Link
+                to="/services"
+                onClick={() => setIsMenuOpen(false)}
+                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
+                  isActive('/services') 
+                    ? 'text-warm-600 bg-warm-50' 
+                    : 'text-gray-700 hover:text-warm-600 hover:bg-warm-50'
+                }`}
+              >
+                Services
               </Link>
               
               {user ? (

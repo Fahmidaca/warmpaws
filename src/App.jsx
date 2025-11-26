@@ -9,6 +9,8 @@ import Signup from './pages/Signup';
 import ForgotPassword from './pages/ForgotPassword';
 import ServiceDetails from './pages/ServiceDetails';
 import MyProfile from './pages/MyProfile';
+import Services from './pages/Services';
+import SafetyGuide from './pages/SafetyGuide';
 import ProtectedRoute from './components/ProtectedRoute';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -38,6 +40,8 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/safety-guide" element={<SafetyGuide />} />
               
               {/* Protected routes */}
               <Route 
