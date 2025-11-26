@@ -1,1 +1,7 @@
-// PostCSS configuration removed - using Vite's built-in Tailwind support
+// PostCSS configuration
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}

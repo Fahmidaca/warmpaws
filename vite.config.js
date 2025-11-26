@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   base: './',
   css: {
-    postcss: false, // Disable PostCSS to avoid conflicts
+    postcss: './postcss.config.js', // Enable PostCSS processing
   },
   build: {
     outDir: 'dist',
