@@ -4,7 +4,7 @@ A cozy winter companion platform designed for pet owners to ensure their furry f
 
 ## 🌟 Live Demo
 
-**Live URL:** [WarmPaws - Pet Care Platform](https://your-netlify-url.netlify.app)
+**Live URL:** [reliable-bunny-d3ebd4.netlify.app]
 
 ## 🎯 Project Purpose
 
