@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary-warm {
+    @apply bg-warm-500 hover:bg-warm-600 text-white font-medium px-6 py-2 rounded-lg transition-all duration-300;
+  }
+  
+  .card-warm {
+    @apply bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-warm-100;
+  }
+  
+  .hero-gradient {
+    background: linear-gradient(135deg, #fef7ee 0%, #fdead6 50%, #fbd6a5 100%);
+  }
+  
+  .winter-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f1761a' fill-opacity='0.1'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+/* AOS Animation styles */
+[data-aos] {
+  pointer-events: none;
+}
+
+[data-aos].aos-animate {
+  pointer-events: auto;
+}
+
+/* Swiper custom styles */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-pagination-bullet {
+  background-color: #f1761a !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #e25a0e !important;
+}
