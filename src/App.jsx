@@ -3,6 +3,7 @@ import { Toaster } from 'react-hot-toast';
 import { AuthProvider } from './contexts/AuthContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import DemoBanner from './components/DemoBanner';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -31,6 +32,7 @@ function App() {
     <AuthProvider>
       <Router>
         <div className="App min-h-screen flex flex-col">
+          <DemoBanner />
           <Navbar />
           
           <main className="flex-grow">
